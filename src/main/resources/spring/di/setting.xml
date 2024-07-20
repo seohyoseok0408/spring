@@ -13,8 +13,9 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
     <!--    Exam exam = new NewlecExam();-->
     <context:annotation-config/>
-    <bean id="exam1" class="spring.di.entity.NewlecExam" p:kor="10" p:eng="10" p:math="10" p:com="10"/>
-    <bean id="exam2" class="spring.di.entity.NewlecExam" p:kor="10" p:eng="20" p:math="10" p:com="10"/>
+    <context:component-scan base-package="spring.di.ui, spring.di.entity"/>
+<!--    <bean id="exam1" class="spring.di.entity.NewlecExam" p:kor="10" p:eng="10" p:math="10" p:com="10"/>-->
+<!--    <bean id="exam2" class="spring.di.entity.NewlecExam" p:kor="10" p:eng="20" p:math="10" p:com="10"/>-->
 
 
 <!--    <bean id="exam" class="spring.di.entity.NewlecExam">-->
@@ -48,10 +49,10 @@
 
 
 <!--    ExamConsole console = new InlineExamConsole(exam);-->
-    <bean id="console" class="spring.di.ui.InlineExamConsole">
+<!--    <bean id="console" class="spring.di.ui.InlineExamConsole">-->
         <!--  console.setExam(exam)  -->
 <!--        <property name="exam" ref="exam" />-->
-    </bean>
+<!--    </bean>-->
 
 <!--    <util:list id="exams" list-class="java.util.ArrayList">-->
 <!--        <bean id="exam" class="spring.di.entity.NewlecExam" p:kor="10" p:eng="20" p:math="30" p:com="40"/>-->
