@@ -8,10 +8,10 @@ public class Program {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.aop/setting.xml");
 
-        Exam proxy = (Exam) context.getBean("proxy");
+        Exam exam = (Exam) context.getBean("exam");
 
-        System.out.printf("total is %d\n", proxy.total());
-        System.out.printf("avg is %f\n", proxy.avg());
+        System.out.printf("total is %d\n", exam.total());
+        System.out.printf("avg is %f\n", exam.avg());
 
         /*
         Exam exam = new NewlecExam(1,1,1,1);
